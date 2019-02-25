@@ -22,7 +22,7 @@ public class MainController {
     public String getHomePage(ModelMap modelMap) {
 
         String title = service.getWelcomeMessage();
-        String datetime = "Last Updated At: "+service.getUpdatedDate();
+        String datetime = "@Record Solutions 2019. Last Updated At: " + service.getUpdatedDate();
         modelMap.addAttribute("ttl", title);
         modelMap.addAttribute("updtdate", datetime);
 
@@ -32,6 +32,7 @@ public class MainController {
     @GetMapping("/start/user/{usertype}")
     public String goToRespectivePages(@PathVariable int usertype) { /*Do I really need Model Map here?*/
         if (usertype == UserType.TEACHER.ordinal()) {
+            System.out.println("Value of UserType PathVariable is: "+usertype);
             return "teacher";
         } else {
             return "student";

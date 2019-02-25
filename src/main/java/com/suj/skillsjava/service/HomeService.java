@@ -8,7 +8,7 @@ import java.time.LocalDate;
 public class HomeService {
 
     public String getWelcomeMessage(){
-        return "If you are a Java enthusiast, you are the right place!!!";
+        return "Get your list of students.";
     }
 
     public LocalDate getUpdatedDate(){
